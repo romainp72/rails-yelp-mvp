@@ -10,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-div">
+      <nav class="navbar navbar-light bg-light ">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">My restaurants online</span>
+        <img src="https://www.logogenie.fr/download/preview/medium/1981277" alt="nope" height=100px width=120px>
+        <button type="button" class="btn btn-secondary">  <%= link_to "Back to restaurants list", restaurants_path %></button>
+      </div>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>

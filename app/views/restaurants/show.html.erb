@@ -3,8 +3,6 @@
   <p> Where? "<%= @restaurant.address %>"<br></p>
   <p> Join them at "<%= @restaurant.phone_number %>"<br></p>
   <br>
-  <%= link_to "Back to restaurants list", restaurants_path %>
-  <br>
   <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
   <br>  <br>
   <ul class="list-group">
