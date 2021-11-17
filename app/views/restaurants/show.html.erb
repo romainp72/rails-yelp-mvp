@@ -1,3 +1,16 @@
-<h2><%= @restaurant.name %> is a <%= @restaurant.category %> place<br></h2>
-<p> Where? "<%= @restaurant.address %>"<br></p>
-<p> Join them at "<%= @restaurant.phone_number %>"<br></p>
+<div class="container">
+  <h2><%= @restaurant.name %> is a <%= @restaurant.category %> place<br></h2>
+  <p> Where? "<%= @restaurant.address %>"<br></p>
+  <p> Join them at "<%= @restaurant.phone_number %>"<br></p>
+  <br>
+  <%= link_to "Back to restaurants list", restaurants_path %>
+  <br>
+  <%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>
+  <br>  <br>
+  <ul class="list-group">
+  Reviews
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.rating %>/5 <br> <%= review.content %></li>
+  <% end %>
+</ul>
+</div>
